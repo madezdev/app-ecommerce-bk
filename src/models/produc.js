@@ -1,14 +1,14 @@
 import { randomUUID } from 'crypto'
-import { readJSON } from '../utils/utils'
+import { readJSON } from '../utils/utils.js'
 
-const products = readJSON('./data/products.json')
+const products = readJSON('../data/products.json')
 
 export class ProductModel {
   static async getAllProducts ({ limit = 10, offset = 0, category = null }) {
     if (category) {
       return products.filter((p) => p.category === category)
     }
-    return products.slice(offset, offset + limit)
+    return products
   }
 
   static async getProductById (id) {

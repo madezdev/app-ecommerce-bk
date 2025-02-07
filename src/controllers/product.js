@@ -1,10 +1,10 @@
-import { ProductModel } from '../models/produc'
-import { validateProduct, validateProductUpdate } from '../shemas/product'
+import { ProductModel } from '../models/produc.js'
+import { validateProduct, validateProductUpdate } from '../shemas/product.js'
 
 export class ProductControllers {
   static async getAllProducts (req, res) {
-    const { limit, offset, category } = req.query
-    const products = await ProductModel.getAllProducts({ limit, offset, category })
+    const { category } = req.query
+    const products = await ProductModel.getAllProducts({ category })
     if (products) return res.status(200).json({ message: 'Get all products', data: products })
     return res.status(404).json({ message: 'Products not found' })
   }

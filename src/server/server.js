@@ -18,7 +18,7 @@ export class Server {
 
   routes () {
     this.app.get('/', (req, res) => {
-      res.send('Hello World')
+      res.json({})
     })
   }
 
