@@ -2,29 +2,27 @@ import express from 'express'
 import cors from 'cors'
 
 export class Server {
-
-  constructor() {
+  constructor () {
     this.app = express()
     this.port = process.env.PORT || 8080
     this.app.use(cors())
     this.app.use(express.json())
     this.middlewares()
     this.routes()
-
   }
 
-  middlewares() {
+  middlewares () {
     this.app.use(express.json())
     this.app.use(cors())
   }
 
-  routes() {
+  routes () {
     this.app.get('/', (req, res) => {
       res.send('Hello World')
     })
   }
 
-  start() {
+  start () {
     this.app.listen(this.port, () => {
       console.log(`Server running on port ${this.port}`)
     })
