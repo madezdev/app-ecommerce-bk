@@ -6,13 +6,13 @@ const products = readJSON('./data/products.json')
 export class ProductModel {
   static async getAllProducts ({ limit = 10, offset = 0, category = null }) {
     if (category) {
-      return products.filter((product) => product.category === category)
+      return products.filter((p) => p.category === category)
     }
     return products.slice(offset, offset + limit)
   }
 
   static async getProductById (id) {
-    const product = products.find((product) => product.id === id)
+    const product = products.find((p) => p.id === id)
     return product
   }
 
@@ -23,7 +23,7 @@ export class ProductModel {
   }
 
   static async updateProduct (id, product) {
-    const index = products.findIndex((product) => product.id === id)
+    const index = products.findIndex((p) => p.id === id)
     if (index === -1) return false
     products[index] = { ...products[index], ...product }
     return products[index]
