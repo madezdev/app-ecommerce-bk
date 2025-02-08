@@ -19,6 +19,7 @@ export class Server {
 
   routes () {
     this.app.use('/api/products', productRouter)
+    this.app.use()
   }
 
   start () {
