@@ -1,7 +1,6 @@
 import { randomUUID } from 'crypto'
 import { readJSON, writeJSON } from '../../utils/utils.js'
 
-
 const productsFile = './src/data/products.json'
 
 export class ProductModel {
@@ -36,12 +35,12 @@ export class ProductModel {
 
   static async updateProduct (id, product) {
     const products = await readJSON(productsFile)
-    const index = products.findIndex((p) => p.id === id)
-    if (index === -1) return { error: 'Product not found', data: null }
+    const productIndex = products.findIndex((p) => p.id === id)
+    if (productIndex === -1) return { error: 'Product not found', data: null }
     const dateUpdate = new Date().toISOString()
-    products[index] = { ...products[index], ...product, dateUpdate }
+    products[productIndex] = { ...products[productIndex], ...product, dateUpdate }
     await writeJSON(productsFile, products)
-    return { message: 'Product updated', data: products[index] }
+    return { message: 'Product updated', data: products[productIndex] }
   }
 
   static async deleteProduct (id) {

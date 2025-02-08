@@ -1,0 +1,26 @@
+[
+  {
+    "id": "a7c3b082-421a-4bba-8253-d13b029edb2e",
+    "dateCreated": "2025-02-08T23:47:01.043Z",
+    "products": [
+      {
+        "product": "6c6cba67-db25-4f60-955e-4c822f986124",
+        "quantity": 2
+      },
+      {
+        "product": "342ae874-a4ce-4dc6-8baa-f73a555f8912",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "2eb0e440-0f1a-4497-b919-18a7ef3d31ff",
+    "dateCreated": "2025-02-08T23:50:31.454Z",
+    "products": [
+      {
+        "product": "342ae874-a4ce-4dc6-8baa-f73a555f8912",
+        "quantity": 1
+      }
+    ]
+  }
+]

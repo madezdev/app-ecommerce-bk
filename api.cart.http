@@ -1,0 +1,5 @@
+### crear un carrito
+POST http://localhost:8080/api/cart
+
+### agregar un producto al carrito
+POST http://localhost:8080/api/cart/2eb0e440-0f1a-4497-b919-18a7ef3d31ff/product/342ae874-a4ce-4dc6-8baa-f73a555f8912

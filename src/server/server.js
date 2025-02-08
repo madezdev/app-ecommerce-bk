@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import { productRouter } from '../routes/product.js'
+import { cartRouter } from '../routes/cart.js'
 
 export class Server {
   constructor () {
@@ -19,6 +20,7 @@ export class Server {
 
   routes () {
     this.app.use('/api/products', productRouter)
+    this.app.use('/api/cart', cartRouter)
   }
 
   start () {
