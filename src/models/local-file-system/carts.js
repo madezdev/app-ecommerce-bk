@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto'
-import { readJSON, writeJSON } from '../../utils/utils'
+import { readJSON, writeJSON } from '../../utils/utils.js'
 
 const cartsFile = './src/data/carts.json'
 const productsFile = './src/data/products.json'
