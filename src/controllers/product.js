@@ -1,4 +1,4 @@
-import { ProductModel } from '../models/product.js'
+import { ProductModel } from '../models/local-file-system/product.js'
 import { validateProduct, validateProductUpdate } from '../shemas/product.js'
 
 export class ProductControllers {
