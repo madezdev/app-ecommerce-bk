@@ -1,0 +1,34 @@
+### get all products
+GET http://localhost:8080/api/products
+
+### get product by id
+GET http://localhost:8080/api/products/6c75e6cc-151d-415e-a161-095aee51f7cb
+
+### create product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+    "title": "product 5",
+    "description": "creando el producto 1",
+    "code": "code12344",
+    "price": 1000,
+    "status": true,
+    "stock": 10,
+    "category": "category 1",
+    "thumbnails": ["thumbnail1", "thumbnail2"]
+
+}
+
+### update product
+PUT http://localhost:8080/api/products/6c75e6cc-151d-415e-a161-095aee51f7cb
+Content-Type: application/json
+
+{
+    "title": "product update",
+    "description": "creando el producto update"
+}
+
+### delete product
+DELETE http://localhost:8080/api/products/6c75e6cc-151d-415e-a161-095aee51f7cb
+

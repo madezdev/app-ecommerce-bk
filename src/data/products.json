@@ -1,0 +1,61 @@
+[
+  {
+    "id": "6c6cba67-db25-4f60-955e-4c822f986124",
+    "title": "product 1",
+    "description": "creando el producto 1",
+    "code": "code123",
+    "price": 1000,
+    "status": true,
+    "stock": 10,
+    "category": "category 1",
+    "thumbnails": [
+      "thumbnail1",
+      "thumbnail2"
+    ]
+  },
+  {
+    "id": "917922b2-e15f-44c4-8a89-c595f4288d63",
+    "dateCreated": "2025-02-08T07:02:06.509Z",
+    "title": "product 2",
+    "description": "creando el producto 1",
+    "code": "code1234",
+    "price": 1000,
+    "status": true,
+    "stock": 10,
+    "category": "category 1",
+    "thumbnails": [
+      "thumbnail1",
+      "thumbnail2"
+    ]
+  },
+  {
+    "id": "342ae874-a4ce-4dc6-8baa-f73a555f8912",
+    "dateCreated": "2025-02-08T07:49:13.333Z",
+    "title": "product 4",
+    "description": "creando el producto 1",
+    "code": "code12344",
+    "price": 1000,
+    "status": true,
+    "stock": 10,
+    "category": "category 1",
+    "thumbnails": [
+      "thumbnail1",
+      "thumbnail2"
+    ]
+  },
+  {
+    "id": "bfb3ffed-de81-4479-8ca8-1459c7ca9452",
+    "dateCreated": "2025-02-08T07:50:16.067Z",
+    "title": "product 5",
+    "description": "creando el producto 1",
+    "code": "code12344",
+    "price": 1000,
+    "status": true,
+    "stock": 10,
+    "category": "category 1",
+    "thumbnails": [
+      "thumbnail1",
+      "thumbnail2"
+    ]
+  }
+]
