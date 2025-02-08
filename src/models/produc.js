@@ -4,7 +4,7 @@ import { readJSON } from '../utils/utils.js'
 const products = readJSON('../data/products.json')
 
 export class ProductModel {
-  static async getAllProducts ({ limit = 10, offset = 0, category = null }) {
+  static async getAllProducts ({ category = null }) {
     if (category) {
       return products.filter((p) => p.category === category)
     }

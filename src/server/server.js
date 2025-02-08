@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import { productRouter } from '../routes/product.js'
 
 export class Server {
   constructor () {
@@ -17,9 +18,7 @@ export class Server {
   }
 
   routes () {
-    this.app.get('/', (req, res) => {
-      res.json({})
-    })
+    this.app.use('/api/products', productRouter)
   }
 
   start () {

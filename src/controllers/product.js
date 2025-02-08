@@ -5,7 +5,8 @@ export class ProductControllers {
   static async getAllProducts (req, res) {
     const { category } = req.query
     const products = await ProductModel.getAllProducts({ category })
-    if (products) return res.status(200).json({ message: 'Get all products', data: products })
+    const quantityProducts = products.length ?? 0
+    if (products) return res.status(200).json({ message: 'Get all products', quantity: quantityProducts, data: products })
     return res.status(404).json({ message: 'Products not found' })
   }
 
