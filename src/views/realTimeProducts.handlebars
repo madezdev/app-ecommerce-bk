@@ -1,0 +1,41 @@
+<h1>Productos en Tiempo Real</h1>
+<ul id="product-list">
+  {{#each products}}
+    <li>{{this.title}} - ${{this.price}} <button onclick="deleteProduct('{{this.id}}')">Eliminar</button></li>
+  {{/each}}
+</ul>
+
+<form id="product-form">
+  <input type="text" id="title" placeholder="Título" required>
+  <input type="number" id="price" placeholder="Precio" required>
+  <button type="submit">Agregar Producto</button>
+</form>
+
+<script>
+  const socket = io();
+
+  // Escuchar eventos de actualización de productos
+  socket.on('updateProducts', (products) => {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = products.map(product => `
+      <li>${product.title} - $${product.price} <button onclick="deleteProduct('${product.id}')">Eliminar</button></li>
+    `).join('');
+  });
+
+  // Enviar nuevo producto al servidor
+  document.getElementById('product-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const title = document.getElementById('title').value;
+    const price = document.getElementById('price').value;
+    socket.emit('createProduct', { title, price });
+    e.target.reset();
+  });
+
+  // Eliminar producto
+  function deleteProduct(id) {
+    socket.emit('deleteProduct', id);
+  }
+
+  // Solicitar la lista de productos al conectarse
+  socket.emit('getProducts');
+</script>

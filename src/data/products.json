@@ -14,21 +14,6 @@
     ]
   },
   {
-    "id": "917922b2-e15f-44c4-8a89-c595f4288d63",
-    "dateCreated": "2025-02-08T07:02:06.509Z",
-    "title": "product 2",
-    "description": "creando el producto 1",
-    "code": "code1234",
-    "price": 1000,
-    "status": true,
-    "stock": 10,
-    "category": "category 1",
-    "thumbnails": [
-      "thumbnail1",
-      "thumbnail2"
-    ]
-  },
-  {
     "id": "342ae874-a4ce-4dc6-8baa-f73a555f8912",
     "dateCreated": "2025-02-08T07:49:13.333Z",
     "title": "product 4",
@@ -44,18 +29,9 @@
     ]
   },
   {
-    "id": "bfb3ffed-de81-4479-8ca8-1459c7ca9452",
-    "dateCreated": "2025-02-08T07:50:16.067Z",
-    "title": "product 5",
-    "description": "creando el producto 1",
-    "code": "code12344",
-    "price": 1000,
-    "status": true,
-    "stock": 10,
-    "category": "category 1",
-    "thumbnails": [
-      "thumbnail1",
-      "thumbnail2"
-    ]
+    "id": "aec1ea10-33af-4aca-88d2-88eb1ae0902c",
+    "dateCreated": "2025-02-25T00:42:57.906Z",
+    "title": "funciona?",
+    "price": "2"
   }
 ]
