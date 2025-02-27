@@ -1,0 +1,21 @@
+<h1>Lista de Productos</h1>
+<ul id="product-list">
+  {{#each products}}
+    <li>{{this.title}} - ${{this.price}}</li>
+  {{/each}}
+</ul>
+
+<script>
+  const socket = io();
+
+  // Escuchar eventos de actualización de productos
+  socket.on('updateProducts', (products) => {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = products.map(product => `
+      <li>${product.title} - $${product.price}</li>
+    `).join('');
+  });
+
+  // Solicitar la lista de productos al conectarse
+  socket.emit('getProducts');
+</script>
