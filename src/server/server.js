@@ -6,6 +6,7 @@ import { create } from 'express-handlebars'
 import http from 'http'
 import { Server as SocketServer } from 'socket.io'
 import { ProductModel } from '../models/local-file-system/product.js'
+import dbConnection from '../dataBase/config.js'
 
 export class Server {
   constructor () {
@@ -13,6 +14,8 @@ export class Server {
     this.port = process.env.PORT || 8088
     this.app.use(cors())
     this.app.use(express.json())
+    // Conectar a la base de datos
+    this.conectardb()
     this.middlewares()
     this.routes()
     this.server = http.createServer(this.app)
@@ -23,6 +26,10 @@ export class Server {
     this.app.engine('handlebars', this.handlebars.engine)
     this.app.set('view engine', 'handlebars')
     this.app.set('views', './src/views')
+  }
+
+  async conectardb () {
+    await dbConnection()
   }
 
   middlewares () {
